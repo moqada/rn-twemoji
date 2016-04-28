@@ -1,0 +1,41 @@
+{
+  "name": "@moqada/rn-twemoji",
+  "description": "twemoji resources for React Native",
+  "version": "0.0.0",
+  "author": "moqada <moqada@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/moqada/rn-twemoji/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.8.0",
+    "eslint-config-moqada": "^14.0.0",
+    "eslint-plugin-flow-vars": "^0.3.0",
+    "eslint-plugin-node": "^1.1.0",
+    "node-emoji": "^1.3.0",
+    "rimraf": "^2.5.2"
+  },
+  "files": [
+    "c",
+    "n",
+    "images"
+  ],
+  "homepage": "https://github.com/moqada/rn-twemoji#readme",
+  "keywords": [
+    "react-native",
+    "twemoji",
+    "emoji"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moqada/rn-twemoji.git"
+  },
+  "scripts": {
+    "build": "./scripts/gen-assets.sh && ./scripts/gen-codes.js && ./scripts/gen-names.js",
+    "lint": "eslint --cache src",
+    "prepublish": "git diff --exit-code && npm run --if-present build",
+    "test": "npm run lint"
+  }
+}

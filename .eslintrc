@@ -1,0 +1,5 @@
+parser: babel-eslint
+extends:
+  - moqada
+  - moqada/cli
+  - moqada/flow-vars
