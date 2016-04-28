@@ -35,7 +35,6 @@
   "scripts": {
     "build": "./scripts/gen-assets.sh && ./scripts/gen-codes.js && ./scripts/gen-names.js",
     "lint": "eslint --cache src",
-    "prepublish": "git diff --exit-code && npm run --if-present build",
     "test": "npm run lint"
   }
 }
