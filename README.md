@@ -28,6 +28,19 @@ npm install --save rn-twemoji
 <Image source={require('@moqada/rn-twemoji/c/1f363')} />;
 ```
 
+## Development
+
+```
+git submodule update --init
+npm i
+```
+
+Generate images and codes from original twemoji resources.
+
+```
+npm run build
+```
+
 ## License
 
 follow [twitter/twemoji](https://github.com/twitter/twemoji).
