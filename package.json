@@ -1,7 +1,7 @@
 {
   "name": "@moqada/rn-twemoji",
   "description": "twemoji resources for React Native",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "moqada <moqada@gmail.com>",
   "bugs": {
     "url": "https://github.com/moqada/rn-twemoji/issues"
