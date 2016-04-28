@@ -13,7 +13,7 @@
 ## Installation
 
 ```
-npm install --save rn-twemoji
+npm install --save @moqada/rn-twemoji
 ```
 
 
