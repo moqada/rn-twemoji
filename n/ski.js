@@ -1,2 +1,2 @@
 
-module.exports = require('../images/1f3bf.png');
+module.exports = require('../images/2/1f3bf.png');

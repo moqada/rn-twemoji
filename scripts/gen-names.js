@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const emojifile = require('node-emoji/lib/emojifile');
+const mkdirp = require('mkdirp');
 const rimraf = require('rimraf');
 
 const config = require('./config');
@@ -16,12 +17,12 @@ const UNICODE_LENGTH = 4;
 /**
  * generate resource file
  */
-function generate() {
+function generate(conf) {
   console.log(`Generating names...`);
-  rimraf.sync(config.NAME_DIR);
-  fs.mkdirSync(config.NAME_DIR);
+  rimraf.sync(conf.NAME_DIR);
+  mkdirp.sync(conf.NAME_DIR);
   const names = {};
-  utils.getBaseImages().forEach(image => {
+  utils.getBaseImages(conf.BASE_SIZE).forEach(image => {
     const basename = path.basename(image, '.png');
     const emojiKey = basename.split('-').map(code => {
       if (code.length < UNICODE_LENGTH) {
@@ -38,9 +39,9 @@ function generate() {
       if (names[name]) {
         throw Error(`Duplicate emoji name: ${name}`);
       }
-      const dist = `${config.NAME_DIR}/${name}.js`;
+      const dist = `${conf.NAME_DIR}/${name}.js`;
       const output = `
-module.exports = require('../${config.DST_DIR}/${image}');
+module.exports = require('${conf.IMG_DIR}/${image}');
 `;
       console.log(`Generating ${dist}...`);
       fs.writeFileSync(dist, output);
@@ -50,4 +51,6 @@ module.exports = require('../${config.DST_DIR}/${image}');
   console.log('Finish names');
 }
 
-generate();
+generate(config.DEFAULT);
+generate(config.VER1);
+generate(config.VER2);
