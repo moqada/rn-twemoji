@@ -27,6 +27,17 @@ npm install --save @moqada/rn-twemoji
 <Image source={require('@moqada/rn-twemoji/c/1f363')} />;
 ```
 
+### Version specification
+
+```jsx
+// twemoji v1
+<Image source={require('@moqada/rn-twemoji/1/n/sushi')} />;
+
+// twemoji v2
+<Image source={require('@moqada/rn-twemoji/2/n/sushi')} />;
+<Image source={require('@moqada/rn-twemoji/n/sushi')} />;
+```
+
 ## Development
 
 ```
