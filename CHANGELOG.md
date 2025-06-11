@@ -1,3 +1,13 @@
+## [0.2.2](https://github.com/moqada/rn-twemoji/compare/v0.2.1...v0.2.2) (2025-06-11)
+
+
+### Bug Fixes
+
+* **deps:** :penguin: Pin node-emoji version to 1.3.0 ([dad3cdd](https://github.com/moqada/rn-twemoji/commit/dad3cddd2f09b03cfe749aaf0fadb6ef8fe8e24f))
+* **scripts:** :penguin: Correct twemoji v2 directory path resolution ([5982f7a](https://github.com/moqada/rn-twemoji/commit/5982f7a4c2396c85a310b069dc6cd9365a53a47d))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/moqada/rn-twemoji/compare/v0.2.0...v0.2.1) (2016-07-28)
 
