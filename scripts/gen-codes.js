@@ -18,7 +18,7 @@ function generate(conf) {
   rimraf.sync(conf.CODE_DIR);
   mkdirp.sync(conf.CODE_DIR);
   const images = {};
-  utils.getBaseImages(conf.BASE_SIZE).forEach(image => {
+  utils.getBaseImages(conf.BASE_SIZE, conf.SRC_IMG_DIR_PREFIX).forEach(image => {
     const basename = path.basename(image, '.png');
     const dist = `${conf.CODE_DIR}/${basename}.js`;
     console.log(`Generating ${dist}...`);

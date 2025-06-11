@@ -5,18 +5,21 @@ module.exports = {
     BASE_SIZE: '72x72',
     IMG_DIR: '../images/2',
     CODE_DIR: 'c',
-    NAME_DIR: 'n'
+    NAME_DIR: 'n',
+    SRC_IMG_DIR_PREFIX: '2'
   },
   VER1: {
     BASE_SIZE: '16x16',
     IMG_DIR: '../../images',
     CODE_DIR: '1/c',
-    NAME_DIR: '1/n'
+    NAME_DIR: '1/n',
+    SRC_IMG_DIR_PREFIX: ''
   },
   VER2: {
     BASE_SIZE: '72x72',
     IMG_DIR: '../../images/2',
     CODE_DIR: '2/c',
-    NAME_DIR: '2/n'
+    NAME_DIR: '2/n',
+    SRC_IMG_DIR_PREFIX: '2'
   }
 };

@@ -22,7 +22,7 @@ function generate(conf) {
   rimraf.sync(conf.NAME_DIR);
   mkdirp.sync(conf.NAME_DIR);
   const names = {};
-  utils.getBaseImages(conf.BASE_SIZE).forEach(image => {
+  utils.getBaseImages(conf.BASE_SIZE, conf.SRC_IMG_DIR_PREFIX).forEach(image => {
     const basename = path.basename(image, '.png');
     const emojiKey = basename.split('-').map(code => {
       if (code.length < UNICODE_LENGTH) {
